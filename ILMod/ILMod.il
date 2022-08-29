@@ -28,10 +28,10 @@
         ldarg.0 // push `this`
         call instance void [tModLoader]Terraria.ModLoader.Mod::Load() // base.Load()
         
-        ldarg.0 // push `this
-        call instance class [log4net]log4net.ILog [tModLoader]Terraria.ModLoader.Mod::get_Logger() // Get this mod's logger
-        ldstr "Hello from ILMod!" // push "Hello from ILMod!"
-        callvirt instance void [log4net]log4net.ILog::Info(object) // Log "Hello from ILMod!"
+        ldarg.0 // push `this`
+        call instance class [log4net]log4net.ILog [tModLoader]Terraria.ModLoader.Mod::get_Logger() // get this mod's logger
+        ldstr "Hello from ILMod!" // push string value "Hello from ILMod!"
+        callvirt instance void [log4net]log4net.ILog::Info(object) // log string value "Hello from ILMod!" (pushed above)
         
         ret // return 
     }
